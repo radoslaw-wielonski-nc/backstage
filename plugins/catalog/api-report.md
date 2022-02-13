@@ -19,6 +19,8 @@ import { GetEntitiesRequest } from '@backstage/catalog-client';
 import { GetEntitiesResponse } from '@backstage/catalog-client';
 import { GetEntityAncestorsRequest } from '@backstage/catalog-client';
 import { GetEntityAncestorsResponse } from '@backstage/catalog-client';
+import { GetEntityFacetsRequest } from '@backstage/catalog-client';
+import { GetEntityFacetsResponse } from '@backstage/catalog-client';
 import { IconComponent } from '@backstage/core-plugin-api';
 import { IdentityApi } from '@backstage/core-plugin-api';
 import { InfoCardVariants } from '@backstage/core-components';
@@ -89,6 +91,11 @@ export class CatalogClientWrapper implements CatalogApi {
     compoundName: EntityName,
     options?: CatalogRequestOptions,
   ): Promise<Entity | undefined>;
+  // (undocumented)
+  getEntityFacets(
+    request: GetEntityFacetsRequest,
+    options?: CatalogRequestOptions,
+  ): Promise<GetEntityFacetsResponse>;
   // (undocumented)
   getLocationByEntity(
     entity: Entity,
