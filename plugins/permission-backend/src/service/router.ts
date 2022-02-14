@@ -79,6 +79,7 @@ export interface RouterOptions {
   discovery: PluginEndpointDiscovery;
   policy: PermissionPolicy;
   identity: IdentityClient;
+  config: Config;
 }
 
 const handleRequest = async (
@@ -139,7 +140,11 @@ const handleRequest = async (
 export async function createRouter(
   options: RouterOptions,
 ): Promise<express.Router> {
-  const { policy, discovery, identity } = options;
+  const { policy, discovery, identity, config, logger } = options;
+
+  if (!config.getOptionalBoolean('permission.enabled')) {
+    logger.warn('Permission backend started with permissions disabled. Enable permissions by setting permission.enabled=true.')
+  }
 
   const permissionIntegrationClient = new PermissionIntegrationClient({
     discovery,
