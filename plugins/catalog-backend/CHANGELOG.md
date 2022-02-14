@@ -1,5 +1,26 @@
 # @backstage/plugin-catalog-backend
 
+## 0.21.4
+
+### Patch Changes
+
+- 1ed305728b: Bump `node-fetch` to version 2.6.7 and `cross-fetch` to version 3.1.5
+- 538ca90790: Use updated type names from `@backstage/catalog-client`
+- ca1d6c1788: Support "dependencyOf" relation in Resource entities
+- e483dd6c72: Update internal `Location` validation.
+- 216725b434: Updated to use new names for `parseLocationRef` and `stringifyLocationRef`
+- b590e9b58d: Optimized entity provider mutations with large numbers of new additions, such as big initial startup commits
+- Updated dependencies
+  - @backstage/backend-common@0.10.8
+  - @backstage/catalog-client@0.7.0
+  - @backstage/errors@0.2.1
+  - @backstage/integration@0.7.3
+  - @backstage/plugin-permission-common@0.5.0
+  - @backstage/catalog-model@0.10.0
+  - @backstage/plugin-permission-node@0.5.0
+  - @backstage/search-common@0.2.3
+  - @backstage/plugin-catalog-common@0.1.3
+
 ## 0.21.3
 
 ### Patch Changes

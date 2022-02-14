@@ -1,5 +1,21 @@
 # @backstage/catalog-model
 
+## 0.10.0
+
+### Minor Changes
+
+- e483dd6c72: **BREAKING**: Remove deprecated validation methods `analyzeLocationSchema`, `locationSchema` and `locationSpecSchema`.
+  This functionality was primarily used internally by the `catalog-backend`.
+- edbc03814a: **BREAKING**: Remove deprecated `serializeEntityRef` which is replaced by `stringifyEntityRef`.
+
+### Patch Changes
+
+- 216725b434: Deprecated `parseLocationReference` and `stringifyLocationReference`,
+  introducing `parseLocationRef` and `stringifyLocationRef` in their place.
+- 20f3244102: Deprecates the following exports which all have very limited and internal use. `ENTITY_META_GENERATED_FIELDS`, `entityHasChanges`, `generateEntityEtag`, `generateEntityUid`, `generateUpdatedEntity`, `ENTITY_META_GENERATED_FIELDS`.
+- Updated dependencies
+  - @backstage/errors@0.2.1
+
 ## 0.9.10
 
 ### Patch Changes
